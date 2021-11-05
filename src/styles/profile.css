@@ -1,0 +1,33 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+}
+
+.profile-detail-avatar {
+  width: 250px;
+  margin: 0 1rem;
+}
+
+.profile-detail-personalInfo {
+  width: 500px;
+}
+
+td {
+  vertical-align: baseline;
+}
+
+tbody > tr > :nth-child(1) {
+  font-weight: bold;
+}
+
+.wide {
+  width: 150px;
+}

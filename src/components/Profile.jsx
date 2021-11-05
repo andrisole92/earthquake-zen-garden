@@ -12,26 +12,31 @@ function Profile() {
           <img src={profile.avatarImage} alt='Profile image' />
         </div>
         <div className='profile-detail-personalInfo'>
-          <div className='flex-row'>
-            <span>First Name</span>
-            <span>{profile.firstName}</span>
-          </div>
-          <div className='flex-row'>
-            <span>Last Name</span>
-            <span>{profile.lastName}</span>
-          </div>
-          <div className='flex-row'>
-            <span>Phone</span>
-            <span>{profile.phone}</span>
-          </div>
-          <div className='flex-row'>
-            <span>Email</span>
-            <span>{profile.email}</span>
-          </div>
-          <div className='flex-row'>
-            <span>Bio</span>
-            <span>{profile.bio}</span>
-          </div>
+          <table>
+            <col span='1' class='wide' />
+            <tbody>
+              <tr>
+                <td>First Name</td>
+                <td>{profile.firstName}</td>
+              </tr>
+              <tr>
+                <td>Last Name</td>
+                <td>{profile.lastName}</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>{profile.phone}</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>{profile.email}</td>
+              </tr>
+              <tr>
+                <td>Bio</td>
+                <td>{profile.bio}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </div>

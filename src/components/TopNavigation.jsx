@@ -4,25 +4,27 @@ import useData from '../hooks/useData';
 
 function TopNavigation() {
   const { setActivePage } = useActivePageContext();
-  const data = useData();
+  const { site, profile } = useData();
 
   return (
     <>
       <header className='header'>
-        <span onClick={() => setActivePage('home')} className='logo'>
-          Logo
+        <span onClick={() => setActivePage('home')} className='header-logo'>
+          <img src={site.logoImage} />
         </span>
-        <span onClick={() => setActivePage('home')} className='title'>
-          Earthquake Zen Garden
+        <span onClick={() => setActivePage('home')} className='header-title'>
+          {site.title}
         </span>
-        <span
+        <a
+          href='?activePage=profile'
           onClick={(e) => {
+            e.preventDefault();
             e.stopPropagation();
             setActivePage('profile');
           }}
-          className='profile-link'>
-          Welcome Sally
-        </span>
+          className='header-profileLink'>
+          {`Welcome ${profile.firstName}`}
+        </a>
       </header>
     </>
   );
