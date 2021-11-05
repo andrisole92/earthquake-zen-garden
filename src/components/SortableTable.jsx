@@ -61,8 +61,8 @@ function SortableTable() {
                 <td>
                   <Link href={`/quake/${id}`}>{place}</Link>
                 </td>
-                <td className='bold darkish'>{mag}</td>
-                <td className='bold darkish'>{formatDateTime(time)}</td>
+                <td className='darkish'>{mag}</td>
+                <td className='darkish'>{formatDateTime(time)}</td>
               </tr>
             );
           })}
