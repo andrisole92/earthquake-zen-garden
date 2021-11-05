@@ -59,7 +59,9 @@ function SortableTable() {
             return (
               <tr key={id}>
                 <td>
-                  <Link href={`/quake/${id}`}>{place}</Link>
+                  <Link title={place} href={`/quake/${id}`}>
+                    {place}
+                  </Link>
                 </td>
                 <td className='darkish'>{mag}</td>
                 <td className='darkish'>{formatDateTime(time)}</td>
