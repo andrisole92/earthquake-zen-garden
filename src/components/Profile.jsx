@@ -13,7 +13,9 @@ function Profile() {
         </div>
         <div className='profile-detail-personalInfo'>
           <table className='profile-detail-personalInfo-table'>
-            <col span='1' class='wide' />
+            <colgroup>
+              <col span='1' className='wide' />
+            </colgroup>
             <tbody>
               <tr>
                 <td>First Name</td>

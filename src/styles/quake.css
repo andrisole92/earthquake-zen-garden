@@ -1,0 +1,13 @@
+.quake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quake-table tbody > tr > :nth-child(1) {
+  font-weight: bold;
+}
+
+.quake-table .wide {
+  width: 150px;
+}

@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useCallback } from 'react';
 import useData from '../hooks/useData';
-import { useLocation, Link } from 'wouter';
+import { Link } from 'wouter';
+import formatDateTime from '../utils/formatDate';
 
 const COLUMNS = [
   { key: 'place', title: 'Title' },
@@ -9,7 +10,6 @@ const COLUMNS = [
 ];
 
 function SortableTable() {
-  const [, setLocation] = useLocation();
   const { data } = useData();
   const rows = useMemo(() => data.features, [data.features]);
   const [sortOrder, setSortOrder] = useState('desc');
@@ -43,7 +43,7 @@ function SortableTable() {
         <thead>
           <tr>
             {COLUMNS.map(({ key, title }) => (
-              <th onClick={() => onColumnHeaderClick(key)}>
+              <th key={key} onClick={() => onColumnHeaderClick(key)}>
                 <span>{title}</span>
                 {sortColumn === key && (
                   <span>{sortOrder === 'desc' ? '⬇️' : '⬆️'}</span>
@@ -55,18 +55,14 @@ function SortableTable() {
         <tbody>
           {sortedRows.map(({ properties, id }) => {
             const { place, mag, time } = properties;
-            const date = new Date(time);
-            const dateString = date.toLocaleDateString('en', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            });
-            const timeString = date.toLocaleTimeString('en');
+
             return (
               <tr key={id}>
-                <Link href={`/quake/${id}`}>{place}</Link>
+                <td>
+                  <Link href={`/quake/${id}`}>{place}</Link>
+                </td>
                 <td>{mag}</td>
-                <td>{`${dateString}, ${timeString}`}</td>
+                <td>{formatDateTime(time)}</td>
               </tr>
             );
           })}
