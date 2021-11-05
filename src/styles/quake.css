@@ -11,3 +11,8 @@
 .quake-table .wide {
   width: 150px;
 }
+
+.quake-table tbody > tr > :nth-child(2) {
+  font-weight: bold;
+  color: var(--grayish);
+}

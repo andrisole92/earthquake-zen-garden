@@ -15,11 +15,23 @@
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--grayish);
+  color: var(--darkish);
   cursor: pointer;
 }
 
 .header-logo {
   width: 40px;
   cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.darkish {
+  color: var(--darkish);
+}
+
+.grayish {
+  color: var(--grayish);
 }

@@ -26,6 +26,12 @@
 
 .profile-detail-personalInfo tbody > tr > :nth-child(1) {
   font-weight: bold;
+  color: var(--darkish);
+}
+
+.profile-detail-personalInfo tbody > tr > :nth-child(2) {
+  font-weight: bold;
+  color: var(--grayish);
 }
 
 .profile-detail-personalInfo .wide {
