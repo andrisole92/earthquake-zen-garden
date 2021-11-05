@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import useEarthquakeDetails from '../../contexts/DataContext';
+import { useEarthquakeDetails } from '../../contexts/DataContext';
 import formatDateTime from '../../utils/formatDate';
 import { genTitleFromMagAndPlace } from '../../utils/TableUtils';
 

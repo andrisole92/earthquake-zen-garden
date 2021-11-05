@@ -15,7 +15,7 @@ export function useDataContext() {
   return context;
 }
 
-export default function useEarthquakeDetails(id) {
+export function useEarthquakeDetails(id) {
   const { data } = useDataContext();
 
   const quake = useMemo(
