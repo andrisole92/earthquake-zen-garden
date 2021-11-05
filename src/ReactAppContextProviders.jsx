@@ -1,8 +1,7 @@
 import React from 'react';
-import { ActivePageContextProvider } from './contexts/ActivePageContext';
 
 function ReactAppContextProviders({ children }) {
-  return <ActivePageContextProvider>{children}</ActivePageContextProvider>;
+  return <>{children}</>;
 }
 
 export default React.memo(ReactAppContextProviders);
