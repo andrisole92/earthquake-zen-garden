@@ -12,7 +12,7 @@ function Profile() {
           <img src={profile.avatarImage} alt='Profile image' />
         </div>
         <div className='profile-detail-personalInfo'>
-          <table>
+          <table className='profile-detail-personalInfo-table'>
             <col span='1' class='wide' />
             <tbody>
               <tr>

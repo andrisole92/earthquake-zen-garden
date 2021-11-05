@@ -20,14 +20,14 @@
   width: 500px;
 }
 
-td {
+.profile-detail-personalInfo td {
   vertical-align: baseline;
 }
 
-tbody > tr > :nth-child(1) {
+.profile-detail-personalInfo tbody > tr > :nth-child(1) {
   font-weight: bold;
 }
 
-.wide {
+.profile-detail-personalInfo .wide {
   width: 150px;
 }
