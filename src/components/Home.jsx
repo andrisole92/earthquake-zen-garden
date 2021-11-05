@@ -1,9 +1,9 @@
 import React from 'react';
-import useData from '../hooks/useData';
+import { useDataContext } from '../contexts/DataContext';
 import SortableTable from './SortableTable';
 
 function Home() {
-  const { data } = useData();
+  const { data } = useDataContext();
   return (
     <>
       <div className='homePage'>

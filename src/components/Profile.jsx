@@ -1,9 +1,8 @@
 import React from 'react';
-import useData from '../hooks/useData';
+import { useDataContext } from '../contexts/DataContext';
 
 function Profile() {
-  const { profile } = useData();
-  console.log(profile);
+  const { profile } = useDataContext();
   return (
     <div className='profile'>
       <h2 className='profile-title'>Profile</h2>

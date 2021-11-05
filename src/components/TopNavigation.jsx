@@ -1,10 +1,10 @@
 import React from 'react';
-import useData from '../hooks/useData';
 import { useLocation, Link } from 'wouter';
+import { useDataContext } from '../contexts/DataContext';
 
 function TopNavigation() {
   const [, setLocation] = useLocation();
-  const { site, profile } = useData();
+  const { site, profile } = useDataContext();
 
   return (
     <>

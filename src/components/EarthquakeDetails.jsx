@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import useEarthquake from '../hooks/useEarthquake';
+import useEarthquakeDetails from '../contexts/DataContext';
 import formatDateTime from '../utils/formatDate';
 import { genTitleFromMagAndPlace } from '../utils/TableUtils';
 
 function EarthquakeDetails({ id }) {
-  const { properties: earthquakeProperties } = useEarthquake(id);
+  const { properties: earthquakeProperties } = useEarthquakeDetails(id);
   const title = useMemo(
     () =>
       genTitleFromMagAndPlace(
