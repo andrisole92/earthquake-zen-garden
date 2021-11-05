@@ -1,8 +1,8 @@
 import React from 'react';
-import { useDataContext } from '../contexts/DataContext';
-import SortableTable from './SortableTable';
+import { useDataContext } from '../../contexts/DataContext';
+import SortableTable from '../SortableTable';
 
-function Home() {
+function HomeView() {
   const { data } = useDataContext();
   return (
     <>
@@ -14,4 +14,4 @@ function Home() {
   );
 }
 
-export default React.memo(Home);
+export default React.memo(HomeView);

@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
-import useEarthquakeDetails from '../contexts/DataContext';
-import formatDateTime from '../utils/formatDate';
-import { genTitleFromMagAndPlace } from '../utils/TableUtils';
+import useEarthquakeDetails from '../../contexts/DataContext';
+import formatDateTime from '../../utils/formatDate';
+import { genTitleFromMagAndPlace } from '../../utils/TableUtils';
 
-function EarthquakeDetails({ id }) {
+function DetailView({ id }) {
   const { properties: earthquakeProperties } = useEarthquakeDetails(id);
   const title = useMemo(
     () =>
@@ -53,4 +53,4 @@ function EarthquakeDetails({ id }) {
   );
 }
 
-export default React.memo(EarthquakeDetails);
+export default React.memo(DetailView);

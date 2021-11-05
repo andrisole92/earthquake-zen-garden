@@ -1,7 +1,7 @@
 import React from 'react';
-import { useDataContext } from '../contexts/DataContext';
+import { useDataContext } from '../../contexts/DataContext';
 
-function Profile() {
+function ProfileView() {
   const { profile } = useDataContext();
   return (
     <div className='profile'>
@@ -44,4 +44,4 @@ function Profile() {
   );
 }
 
-export default React.memo(Profile);
+export default React.memo(ProfileView);
