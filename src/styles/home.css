@@ -7,3 +7,7 @@
 .sortableTable tr > th {
   cursor: pointer;
 }
+
+.sortableTable tbody > tr > :nth-child(2) {
+  text-align: center;
+}
