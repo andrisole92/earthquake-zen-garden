@@ -4,15 +4,21 @@ import formatDateTime from '../../utils/formatDate';
 import { genTitleFromMagAndPlace } from '../../utils/TableUtils';
 
 function DetailView({ id }) {
-  const { properties: earthquakeProperties } = useEarthquakeDetails(id);
+  const quake = useEarthquakeDetails(id);
+
   const title = useMemo(
     () =>
       genTitleFromMagAndPlace(
-        earthquakeProperties.mag,
-        earthquakeProperties.place
-      ),
-    [earthquakeProperties]
+        quake?.properties?.mag ?? '',
+        quake?.properties?.place ?? ''
+      ) ?? '',
+    [quake]
   );
+
+  if (quake == null) {
+    return <p>Sorry, no data was found</p>;
+  }
+
   return (
     <>
       <div className='quake'>
@@ -28,23 +34,23 @@ function DetailView({ id }) {
             </tr>
             <tr>
               <td>Magnitude</td>
-              <td>{earthquakeProperties.mag}</td>
+              <td>{quake?.properties.mag}</td>
             </tr>
             <tr>
               <td>Time</td>
-              <td>{formatDateTime(earthquakeProperties.time)}</td>
+              <td>{formatDateTime(quake?.properties.time)}</td>
             </tr>
             <tr>
               <td>Status</td>
-              <td>{earthquakeProperties.status}</td>
+              <td>{quake?.properties.status}</td>
             </tr>
             <tr>
               <td>Tsunami</td>
-              <td>{earthquakeProperties.tsunami}</td>
+              <td>{quake?.properties.tsunami}</td>
             </tr>
             <tr>
               <td>Type</td>
-              <td>{earthquakeProperties.type}</td>
+              <td>{quake?.properties.type}</td>
             </tr>
           </tbody>
         </table>

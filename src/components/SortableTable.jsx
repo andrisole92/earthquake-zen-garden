@@ -42,6 +42,7 @@ function SortableTable() {
       <table className='sortableTable'>
         <thead>
           <tr>
+            {/* Add Keybaord navigation */}
             {COLUMNS.map(({ key, title }) => (
               <th key={key} onClick={() => onColumnHeaderClick(key)}>
                 <span>{title}</span>
